@@ -9,7 +9,7 @@
     ./system/users.nix
     ./system/network.nix
     ./system/audio.nix
-    ./system/peripherals.nix
+    ./system/peripherals.nix  
   ];
 
   # Flakes
@@ -49,13 +49,15 @@
     vim
     git
     htop
-    nvtop
     vscode
     nixfmt-rfc-style
     obs-studio
     flameshot
     gcc
     libgcc
+    usbimager
+    chromium
+    ungoogled-chromium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
