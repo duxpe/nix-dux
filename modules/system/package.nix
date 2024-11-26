@@ -7,9 +7,6 @@
 }:
 {
   # Packages install
-
-  programs.firefox.enable = true;
-
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
@@ -25,6 +22,10 @@
     usbimager
     ungoogled-chromium
     google-chrome
+    obsidian
+    flameshot
   ];
+
+  programs.firefox.enable = true;
 
 }
