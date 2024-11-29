@@ -13,17 +13,36 @@
     vim
     git
     htop
-    vscode
+
     nixfmt-rfc-style
+
+    #Utils
     obs-studio
     flameshot
-    gcc
-    libgcc
     usbimager
+    cmatrix
+
+    #Browsers
     ungoogled-chromium
     google-chrome
+
+    #Productivity
     obsidian
-    flameshot
+    drawio
+    inkscape
+    logisim-evolution
+
+    #Coding
+    vscode
+    neovim
+
+    ##Java
+    jdk
+    eclipses.eclipse-sdk
+
+    ##C / C++
+    gcc
+    libgcc
   ];
 
   programs.firefox.enable = true;
