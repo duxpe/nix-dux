@@ -16,7 +16,7 @@
     btop
     inxi
     kitty
-    alacritty 
+    alacritty
 
     nixfmt-rfc-style
 
@@ -43,10 +43,10 @@
     rofi-wayland
     swaynotificationcenter
     wlogout
+    wlsunset
     pyprland
     libsForQt5.qt5ct
     qt6ct
-
 
     #Utils
     obs-studio
@@ -54,9 +54,14 @@
     usbimager
     cmatrix
     unzip
-    cava
     networkmanagerapplet
-    
+    jq
+    linux-wifi-hotspot
+    desktop-file-utils
+    shared-mime-info
+    xdg-utils
+    xdg-user-dirs
+    xorg.xhost # needed for some packages running x11 like gparted
 
     #Browsers
     ungoogled-chromium

@@ -16,8 +16,8 @@
     ./system/network.nix
     ./system/audio.nix
     ./system/peripherals.nix
-    ./system/hyprland.nix
     ./system/xserver.nix
+    ./system/hyprland.nix
   ];
 
   # Flakes

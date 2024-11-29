@@ -8,5 +8,5 @@
 {
   # X11Server configuration
   services.xserver.enable = true; # Disable this if only using the Wayland.
-  services.xserver.libinput.enable = true; # touchpad
+  services.libinput.enable = true; # touchpad
 }
