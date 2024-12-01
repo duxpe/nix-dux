@@ -35,6 +35,7 @@
     waybar
     dunst
     xfce.thunar
+    xfce.thunar-archive-plugin
     rofi-wayland
     hyprland-protocols
     xdg-desktop-portal-hyprland
@@ -104,6 +105,10 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
+  ];
+
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
   ];
 
   programs.firefox.enable = true;

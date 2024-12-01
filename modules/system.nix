@@ -37,6 +37,15 @@
   # services.displayManager.sddm.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "no";
+      PasswordAuthentication = true;
+    };
+  };
+  programs.ssh.startAgent = true;
+
   system.stateVersion = "24.05"; # Do not change...
 
 }
