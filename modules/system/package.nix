@@ -17,7 +17,7 @@
     inxi
     kitty
     alacritty
-
+    neofetch
     nixfmt-rfc-style
 
     #System or Hardware
@@ -25,7 +25,6 @@
     grim
     slurp
     swappy
-    swww
     imagemagick
     wallust
     pamixer
@@ -34,21 +33,28 @@
 
     #Wayland / Hyprland Enhancements
     waybar
-    xdg-desktop-portal-wlr
+    dunst
+    xfce.thunar
+    rofi-wayland
+    hyprland-protocols
+    xdg-desktop-portal-hyprland
     hyprcursor
+    hyprpaper
     hypridle
     hyprlock
-    swaylock
+    pyprland
     wl-clipboard
-    rofi-wayland
-    swaynotificationcenter
     wlogout
     wlsunset
     pyprland
     libsForQt5.qt5ct
     qt6ct
+    nwg-look
+    gnome-icon-theme
 
     #Utils
+    xorg.xkill
+    zip
     obs-studio
     flameshot
     usbimager
@@ -84,6 +90,20 @@
     ##C / C++
     gcc
     libgcc
+  ];
+
+  fonts.packages = with pkgs; [
+    #Fonts
+    nerdfonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
   ];
 
   programs.firefox.enable = true;

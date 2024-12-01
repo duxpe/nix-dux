@@ -18,6 +18,7 @@
     ./system/peripherals.nix
     ./system/xserver.nix
     ./system/hyprland.nix
+    ./system/greetd.nix
   ];
 
   # Flakes
@@ -33,8 +34,8 @@
   home-manager.useUserPackages = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.desktopManager.plasma6.enable = true;
 
   system.stateVersion = "24.05"; # Do not change...
 
