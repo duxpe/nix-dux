@@ -1,8 +1,9 @@
-/*Note: Everytime you change this file, please run:
+/* Note: Every time you change this file, please run:
 
 > sudo nixos-rebuild switch --flake .#duxpe --install-bootloader
 
 */
+
 {
   config,
   pkgs,
@@ -11,9 +12,11 @@
   ...
 }:
 {
-  # Grub configuration
+  # Bootloader configuration
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Grub configuration
   boot.loader.grub.enable = true;
   boot.loader.grub.devices = [ "nodev" ];
   boot.loader.grub.efiSupport = true;
@@ -23,6 +26,8 @@
   boot.loader.grub.fontSize = 26;
   boot.loader.grub.gfxmodeEfi = "auto";
   boot.loader.grub.gfxmodeBios = "auto";
+
+  # Grub extra entries
   boot.loader.grub.extraEntries = ''
     submenu "More Options..." {
       menuentry "Reboot" {
@@ -36,6 +41,4 @@
       }
     }
   '';
-
 }
-

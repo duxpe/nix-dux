@@ -7,10 +7,17 @@
 }:
 {
 
+  # Referência: Peguei isso de uma config no Reddit, 
+  # mas não sei ao certo o link, 
+  # então agora a referência da origem está perdida ;-;
+
+
+  # CPU Scheduling
   # Better scheduling for CPU cycles - thanks System76!!!
   services.system76-scheduler.settings.cfsProfiles.enable = true;
 
-  # Enable TLP (better than gnomes internal power manager)
+  # Power Management
+  # Enable TLP (better than GNOME's internal power manager)
   services.tlp = {
     enable = true;
     settings = {
@@ -21,12 +28,13 @@
     };
   };
 
-  # Disable GNOMEs power management
+  # Disable GNOME's power management
   services.power-profiles-daemon.enable = false;
 
   # Enable powertop
   powerManagement.powertop.enable = true;
 
+  # Thermal Management
   # Enable thermald (only necessary if on Intel CPUs)
   services.thermald.enable = true;
 

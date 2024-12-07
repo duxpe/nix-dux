@@ -1,4 +1,6 @@
-#Original config from: https://github.com/sjcobb2022/nixos-config/blob/main/hosts/common/optional/greetd.nix
+# Original config from:
+# https://github.com/sjcobb2022/nixos-config/blob/main/hosts/common/optional/greetd.nix
+
 {
   pkgs,
   inputs,
@@ -9,6 +11,7 @@ let
   hyprland-session = "${pkgs.hyprland}/share/wayland-sessions";
 in
 {
+  # Greetd service configuration
   services.greetd = {
     enable = true;
     settings = {
@@ -19,9 +22,9 @@ in
     };
   };
 
-  # this is a life saver.
-  # literally no documentation about this anywhere.
-  # might be good to write about this...
+  # Systemd service configuration for greetd
+  # This is a life saver. Literally no documentation about this anywhere.
+  # Might be good to write about this...
   # https://www.reddit.com/r/NixOS/comments/u0cdpi/tuigreet_with_xmonad_how/
   systemd.services.greetd.serviceConfig = {
     Type = "idle";
