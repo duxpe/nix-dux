@@ -3,9 +3,11 @@
   pkgs,
   lib,
   inputs,
+  options,
   ...
 }:
 {
+  # Import configurations
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
@@ -21,7 +23,7 @@
     ./system/greetd.nix
   ];
 
-  # Flakes
+  # Nix settings
   nix = {
     package = pkgs.nixVersions.latest;
     extraOptions = ''
@@ -29,23 +31,22 @@
     '';
   };
 
-  # Home Manager
+  # Home Manager settings
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
+  # Enable GNOME Keyring
+  services.gnome.gnome-keyring.enable = true;
 
-  services.openssh = {
+  # GnuPG settings
+  programs.gnupg.agent = {
     enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = true;
-    };
+    enableSSHSupport = true;
   };
-  programs.ssh.startAgent = true;
 
+  # Hardware settings
+  hardware.graphics.enable32Bit = true;
+
+  # System state version
   system.stateVersion = "24.05"; # Do not change...
-
 }
