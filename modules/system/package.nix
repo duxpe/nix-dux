@@ -95,9 +95,18 @@
     inkscape # 🖼️ Vector graphics editor
     logisim-evolution # 🔌 Digital logic design tool
 
+    # Cloud
+    rclone # 🌐 Rclone is a command line program to manage files on cloud storage
+    fuse3 # 🛠️ Filesystem in Userspace
+    # dropbox
+    # xfce.thunar-dropbox-plugin
+    # drive
+    # xfce.thunar-volman
+
     # Java Development
     jdk # ☕ Java Development Kit
     eclipses.eclipse-sdk # ☕ Integrated development environment for Java
+    
 
     # C / C++ Development
     gcc # 🛠️ GNU Compiler Collection
